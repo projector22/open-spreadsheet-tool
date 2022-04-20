@@ -1,6 +1,6 @@
 <?php
 
-namespace projector22\OST;
+namespace projector22\open\spreadsheet\tool;
 
 use Exception;
 
