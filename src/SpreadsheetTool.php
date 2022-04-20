@@ -3,6 +3,7 @@
 namespace Open\Spreadsheet\Tool;
 
 use Exception;
+use Open\Spreadsheet\Tool\SpreadsheetEngine;
 
 
 /**
