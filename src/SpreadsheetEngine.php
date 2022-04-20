@@ -57,7 +57,7 @@ class SpreadsheetEngine {
      * @since   3.19.0
      */
 
-    protected string $js_path = './src/js/lib/spreadsheetTool.js';
+    protected string $js_path = './js/spreadsheetTool.js';
 
     /**
      * A column counter to indicate where we are in the spreadsheet
