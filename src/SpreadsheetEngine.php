@@ -1,9 +1,6 @@
 <?php
 
-namespace Framework\Tools\Spreadsheet;
-
 use Exception;
-use Framework\Tools\Debug\DebugTools;
 
 /**
  * This class handles the backend of spreadsheet tools.

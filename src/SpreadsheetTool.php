@@ -1,10 +1,7 @@
 <?php
 
-namespace Framework\Tools\Spreadsheet;
-
 use Exception;
-use Framework\Tools\Debug\DebugTools;
-use Framework\Tools\Spreadsheet\SpreadsheetEngine;
+use SpreadsheetEngine;
 
 /**
  * This class handles any file upload requests
