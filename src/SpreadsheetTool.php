@@ -1,7 +1,9 @@
 <?php
 
+namespace projector22\OST;
+
 use Exception;
-use SpreadsheetEngine;
+use projector22\OST\SpreadsheetEngine;
 
 /**
  * This class handles any file upload requests

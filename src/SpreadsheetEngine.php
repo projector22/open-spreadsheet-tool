@@ -1,5 +1,7 @@
 <?php
 
+namespace projector22\OST;
+
 use Exception;
 
 /**
