@@ -1,9 +1,10 @@
 <?php
 
-namespace Open\Spreadsheet\Tool;
+namespace OpenSpreadsheetTool;
 
 use Exception;
-use Open\Spreadsheet\Tool\SpreadsheetEngine;
+use OpenSpreadsheetTool\SpreadsheetEngine;
+
 
 
 /**

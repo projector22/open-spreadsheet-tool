@@ -1,6 +1,6 @@
 <?php
 
-namespace Open\Spreadsheet\Tool;
+namespace OpenSpreadsheetTool;
 
 use Exception;
 
