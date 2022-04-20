@@ -1,0 +1,8 @@
+{
+    "name": "projector22/open-spreadsheet-tool",
+    "description": "Tool for drawing a spreadsheet on a webpage using PHP",
+    "license": "AGPL-3.0-only",
+    "require": {
+        "php": ">=8.0"
+    }
+}
