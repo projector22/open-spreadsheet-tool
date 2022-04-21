@@ -1,5 +1,6 @@
 {
     "name": "projector22/open-spreadsheet-tool",
+    "type": "library",
     "description": "Tool for drawing a spreadsheet on a webpage using PHP",
     "license": "AGPL-3.0-only",
     "require": {
@@ -9,5 +10,12 @@
         "psr-4": {
             "OpenSpreadsheetTool\\": "src/"
         }
-    }
+    },
+    "authors": [
+        {
+            "name": "Gareth Palmer",
+            "email": "bravdthepally@gmail.com",
+            "role": "lead"
+        }
+    ]
 }
