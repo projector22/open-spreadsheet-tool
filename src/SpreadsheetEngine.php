@@ -11,7 +11,7 @@ use Exception;
  * 
  * @author  Gareth Palmer  @evangeltheology
  * 
- * @since   0.0.1 Alpha
+ * @since   0.0.1 Dev
  */
 
 class SpreadsheetEngine {
@@ -22,7 +22,7 @@ class SpreadsheetEngine {
      * @var string  COLUMN_DEFAULT_WIDTH    Default: 150px
      * 
      * @access  public
-     * @since   0.0.1 Alpha
+     * @since   0.0.1 Dev
      */
 
     const COLUMN_DEFAULT_WIDTH = '150px';
@@ -33,7 +33,7 @@ class SpreadsheetEngine {
      * @var integer MAX_DEFAULT_COLUMNS Default: 50
      * 
      * @access  public
-     * @since   0.0.1 Alpha
+     * @since   0.0.1 Dev
      */
 
     const MAX_DEFAULT_COLUMNS = 10;
@@ -44,7 +44,7 @@ class SpreadsheetEngine {
      * @var integer MAX_DEFAULT_ROWS    Default: 200
      * 
      * @access  public
-     * @since   0.0.1 Alpha
+     * @since   0.0.1 Dev
      */
 
     const MAX_DEFAULT_ROWS = 30;
@@ -56,7 +56,7 @@ class SpreadsheetEngine {
      * @var string  $js_path
      * 
      * @access  protected
-     * @since   0.0.1 Alpha
+     * @since   0.0.1 Dev
      */
 
     protected string $js_path;
@@ -67,7 +67,7 @@ class SpreadsheetEngine {
      * @var int $column
      * 
      * @access  protected
-     * @since   0.0.1 Alpha
+     * @since   0.0.1 Dev
      */
 
     protected int $column;
@@ -78,7 +78,7 @@ class SpreadsheetEngine {
      * @var int $row
      * 
      * @access  protected
-     * @since   0.0.1 Alpha
+     * @since   0.0.1 Dev
      */
 
     protected int $row;
@@ -92,7 +92,7 @@ class SpreadsheetEngine {
      * @var string  $default_unit.  Default: 'px'
      * 
      * @access  protected
-     * @since   0.0.1 Alpha
+     * @since   0.0.1 Dev
      */
 
     protected string $default_unit = 'px';
@@ -104,7 +104,7 @@ class SpreadsheetEngine {
      * @var string  $default_column_width
      * 
      * @access  protected
-     * @since   0.0.1 Alpha
+     * @since   0.0.1 Dev
      */
 
     protected string $default_column_width;
@@ -116,7 +116,7 @@ class SpreadsheetEngine {
      * @var array   $column_width_overwrite
      * 
      * @access  protected
-     * @since   0.0.1 Alpha
+     * @since   0.0.1 Dev
      */
 
     protected array $column_width_overwrite = [];
@@ -144,7 +144,7 @@ class SpreadsheetEngine {
      * @return  string
      * 
      * @access  protected
-     * @since   0.0.1 Alpha
+     * @since   0.0.1 Dev
      */
 
     protected function spreadsheet_styles(): string {
@@ -160,7 +160,7 @@ class SpreadsheetEngine {
      * Calculate and return the css required for calculating widths and grid-template-columns on the sheet.
      * 
      * @access  protected
-     * @since   0.0.1 Alpha
+     * @since   0.0.1 Dev
      */
 
     protected function calculate_widths(): string {
@@ -200,7 +200,7 @@ class SpreadsheetEngine {
      * @return  string
      * 
      * @access  protected
-     * @since   0.0.1 Alpha
+     * @since   0.0.1 Dev
      */
 
     protected function set_header_grid_areas( array $cell = [] ): string {
@@ -229,7 +229,7 @@ class SpreadsheetEngine {
      * @return  string
      * 
      * @access  private
-     * @since   0.0.1 Alpha
+     * @since   0.0.1 Dev
      */
 
     private function format_params( array $params ): string {
@@ -262,7 +262,7 @@ class SpreadsheetEngine {
      * @return  string
      * 
      * @access  protected
-     * @since   0.0.1 Alpha
+     * @since   0.0.1 Dev
      */
 
     protected function text_cell( array $data, mixed $value ): string {
@@ -307,7 +307,7 @@ class SpreadsheetEngine {
      * @return string
      * 
      * @access  protected
-     * @since   0.0.1 Alpha
+     * @since   0.0.1 Dev
      */
 
     protected function select_cell( mixed $entry ): string {

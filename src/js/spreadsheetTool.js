@@ -5,9 +5,7 @@
  * 
  * @requires    ES6
  * 
- * @since   3.19.0
- * 
- * @version 1.0
+ * @since   0.0.1 Dev
  */
 
 
@@ -16,7 +14,7 @@
  * 
  * @param {string} id   The id of the table being worked on.
  * 
- * @since   3.19.0
+ * @since   0.0.1 Dev
  */
 export default class SpreadsheetTool {
     constructor(id) {
@@ -26,7 +24,7 @@ export default class SpreadsheetTool {
          * 
          * @var {string} id
          * 
-         * @since   3.19.0
+         * @since   0.0.1 Dev
          */
         this.id = id;
 
@@ -36,7 +34,7 @@ export default class SpreadsheetTool {
          * 
          * @var {object} cells
          * 
-         * @since   3.19.0
+         * @since   0.0.1 Dev
          */
         this.cells = document.getElementsByName(`${this.id}__spreadsheet_cell`);
 
@@ -52,7 +50,7 @@ export default class SpreadsheetTool {
          * 
          * @var {integer} last_column
          * 
-         * @since   3.19.0
+         * @since   0.0.1 Dev
          */
         this.last_column = this.cells[this.cells.length - 1].dataset.column;
 
@@ -61,7 +59,7 @@ export default class SpreadsheetTool {
          * 
          * @var {integer} last_row
          * 
-         * @since   3.19.0
+         * @since   0.0.1 Dev
          */
         this.last_row = this.cells[this.cells.length - 1].dataset.row;
 
@@ -70,7 +68,7 @@ export default class SpreadsheetTool {
          * 
          * @var {DOM} canvas
          * 
-         * @since   3.23.2
+         * @since   0.0.1 Dev
          */
         this.canvas = document.getElementById(`${this.id}__canvas`);
 
@@ -79,7 +77,7 @@ export default class SpreadsheetTool {
          * 
          * @var {object} focused
          * 
-         * @since   3.19.0
+         * @since   0.0.1 Dev
          */
         this.focus = {
             column: null,
@@ -95,7 +93,7 @@ export default class SpreadsheetTool {
     /**
      * Perform all of the onExample actions required by the spreadsheet.
      * 
-     * @since   3.19.0
+     * @since   0.0.1 Dev
      */
 
     listener() {
@@ -156,7 +154,7 @@ export default class SpreadsheetTool {
     /**
      * Observe if a cell is being selected and highlight as needed.
      * 
-     * @since   3.23.2
+     * @since   0.0.1 Dev
      */
 
     selector() {
@@ -302,7 +300,7 @@ export default class SpreadsheetTool {
  * 
  * @param {string} id ID of the spreadsheet.
  * 
- * @since   3.23.2
+ * @since   0.0.1 Dev
  */
 
 function clear_all_selected(id) {
