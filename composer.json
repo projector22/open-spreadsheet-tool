@@ -17,5 +17,8 @@
             "email": "bravdthepally@gmail.com",
             "role": "lead"
         }
-    ]
+    ],
+    "require-dev": {
+        "projector22/php-debuggin-tool": "^1.0"
+    }
 }
