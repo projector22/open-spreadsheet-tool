@@ -5,6 +5,8 @@
  * 
  * @requires    ES6
  * 
+ * @version NEW
+ * 
  * @since   ???
  */
 
@@ -46,6 +48,15 @@ export default class SpreadsheetEngine {
             return;
         }
 
+        this.selected_cell;
+
+        this.editing = false;
+
+
+        /**
+         * TO BE ESTABLISHED - BELOW
+         */
+
         /**
          * The last column in the current spreadsheet.
          * 
@@ -85,7 +96,7 @@ export default class SpreadsheetEngine {
             row: null,
         };
 
-        // this.listener();
+        this.listener();
         this.selector();
     }
 
@@ -97,56 +108,59 @@ export default class SpreadsheetEngine {
      */
 
     listener() {
-        if (this.cells.length == 0) {
-            return;
-        }
         const current_object = this;
-        this.cells.forEach(cell => {
-            cell.onfocus = function () {
-                // Does not appear to have a purpose yet
-                current_object.focus = {
-                    column: this.dataset.column,
-                    row: this.dataset.row,
-                };
-            };
-            cell.onkeydown = function (action) {
+        document.addEventListener("keydown", function (action) {
+            if (current_object.selected_cell) {
+                const row = current_object.selected_cell.dataset.row;
+                const col = current_object.selected_cell.dataset.col;
                 let id;
                 switch (action.key) {
                     case 'ArrowUp': // Move up
-                        id = `${current_object.id}__row_${eval(this.dataset.row) - 1}__column_${this.dataset.column}`;
+                        id = `${current_object.id}__r${eval(row) - 1}c${col}`;
                         if (document.getElementById(id)) {
                             document.getElementById(id).focus();
                         }
                         break;
                     case 'ArrowDown': // Move down
-                        id = `${current_object.id}__row_${eval(this.dataset.row) + 1}__column_${this.dataset.column}`;
+                        id = `${current_object.id}__r${eval(row) + 1}c${col}`;
                         if (document.getElementById(id)) {
                             document.getElementById(id).focus();
                         }
                         break;
                     case 'ArrowRight': // Move right
-                        id = `${current_object.id}__row_${this.dataset.row}__column_${eval(this.dataset.column) + 1}`;
+                        id = `${current_object.id}__r${row}c${eval(col) + 1}`;
                         if (document.getElementById(id)) {
                             document.getElementById(id).focus();
                         }
                         break;
                     case 'ArrowLeft': // Move left
-                        id = `${current_object.id}__row_${this.dataset.row}__column_${eval(this.dataset.column) - 1}`;
+                        id = `${current_object.id}__r${row}c${eval(col) - 1}`;
                         if (document.getElementById(id)) {
                             document.getElementById(id).focus();
                         }
                         break;
                     case 'Enter': // confirm and down one
-                        id = `${current_object.id}__row_${eval(this.dataset.row) + 1}__column_${this.dataset.column}`;
-                        if (document.getElementById(id)) {
-                            document.getElementById(id).focus();
+                        if (current_object.editing) {
+                            current_object.editing = false;
+                            id = `${current_object.id}__r${eval(row) + 1}c${col}`;
+                            if (document.getElementById(id)) {
+                                document.getElementById(id).focus();
+                            }
+                        } else {
+                            current_object.edit_cell();
                         }
                         break;
-                    case 'Escape': // Cancel action
-                        this.value = ''; // @todo Must functionally go back to the origonal text if there was one
-                        break;
+                        // case 'Escape': // Cancel action
+                        //     this.value = ''; // @todo Must functionally go back to the origonal text if there was one
+                        //    break;
                 }
-            };
+                const new_selected_cell = document.getElementById(id);
+                if (new_selected_cell) {
+                    new_selected_cell.classList.add('sprss_cell_selected');
+                    current_object.selected_cell.classList.remove('sprss_cell_selected');
+                    current_object.selected_cell = new_selected_cell;
+                }
+            }
         });
     }
 
@@ -158,22 +172,36 @@ export default class SpreadsheetEngine {
      */
 
     selector() {
-        let selected_cell, selected_cell_id;
+        const current_object = this;
+        let selected_cell = this.selected_cell;
         this.cells.forEach(cell => {
+            cell.ondblclick = function () {
+                // Load the text editor / etc.
+                this.edit_cell();
+            };
             cell.onmousedown = function () {
                 if (selected_cell) {
                     selected_cell.classList.remove('sprss_cell_selected');
                 }
                 this.classList.add('sprss_cell_selected');
+                this.focus();
                 selected_cell = document.getElementById(this.id);
-                console.log(this.dataset)
-            };
-            cell.ondblclick = function () {
-                // Load the text editor / etc.
-                console.log("Double Click");
+                current_object.selected_cell = selected_cell;
             };
         });
+    }
 
+
+    /**
+     * Begin editing the selected cell.
+     * 
+     * @since   ???
+     */
+
+    edit_cell() {
+        // Begin editing the cell.
+        this.editing = true;
+        console.log("Start Editing Cell");
     }
 
 }
