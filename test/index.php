@@ -1,6 +1,7 @@
 <?php
 
 use Debugger\Debug;
+use OpenSpreadsheetTool\Spreadsheet;
 use OpenSpreadsheetTool\SpreadsheetTool;
 
 function autoload( string $class ) {
@@ -24,6 +25,8 @@ Debug::__constructStatic();
 
 echo "<h1> Open Speadsheet Tool - Test Page</h1>";
 
-$ss = new SpreadsheetTool( 'test_ss', 10, 25 );
-$ss->construct_blank_sheet();
+// $ss = new SpreadsheetTool( 'test_ss', 10, 25 );
+// $ss->construct_blank_sheet();
 
+$ss_new = new Spreadsheet( 'test_sheet_new' );
+$ss_new->construct_blank_sheet( 25, 4 );
