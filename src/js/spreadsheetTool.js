@@ -42,6 +42,7 @@ export default class SpreadsheetTool {
          * Disable if the contents are empty, something common if on a an AJAX load, for example
          */
         if (this.cells.length == 0) {
+            console.warn("No cells detected for table " + this.id);
             return;
         }
 
@@ -86,7 +87,6 @@ export default class SpreadsheetTool {
 
         this.listener();
         this.selector();
-
     }
 
 
