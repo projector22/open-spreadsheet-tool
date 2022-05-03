@@ -36,7 +36,7 @@ class SpreadsheetEngine {
      * @since   0.0.1 Dev
      */
 
-    const MAX_DEFAULT_COLUMNS = 10;
+    const MAX_DEFAULT_COLUMNS = 50;
 
     /**
      * The default maximum number of columns.
@@ -47,7 +47,7 @@ class SpreadsheetEngine {
      * @since   0.0.1 Dev
      */
 
-    const MAX_DEFAULT_ROWS = 30;
+    const MAX_DEFAULT_ROWS = 200;
 
 
     /**
