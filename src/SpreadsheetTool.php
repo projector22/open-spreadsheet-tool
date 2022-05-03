@@ -171,7 +171,11 @@ class SpreadsheetTool extends SpreadsheetEngine {
         $this->max_rows    = is_null( $this->max_rows )    ? self::MAX_DEFAULT_ROWS    : $this->max_rows;
         echo "<style>{$this->spreadsheet_styles()}</style>";
         // echo "<canvas id='xyzr' class='{$this->table_id}__spreadsheet_canvas'></canvas>";
-        echo "<div id='{$this->table_id}__canvas' class='{$this->table_id}__spreadsheet_container' id='{$this->table_id}' name='spreadsheet'>";
+        echo "<div id='{$this->table_id}__canvas'
+                   class='{$this->table_id}__spreadsheet_container' 
+                   name='spreadsheet'
+                   data-width={$this->sheet_width}
+            >";
         if ( $this->include_header ) {
             echo $this->header_data;
         }

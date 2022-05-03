@@ -183,10 +183,10 @@ class SpreadsheetEngine {
                 }
             }
             $style .= "grid-template-columns: " . implode( ' ', $rows ) . ";\n";
-            $style .= "        max-width: calc((var(--{$this->table_id}-cell_width) * {$st_rows}) + {$extra}px + {$this->max_columns}px);";
+            $style .= "max-width: calc((var(--{$this->table_id}-cell_width) * {$st_rows}) + {$extra}px + {$this->max_columns}px);";
         } else {
             $style .= "grid-template-columns: repeat({$this->max_columns}, var(--{$this->table_id}-cell_width));\n";
-            $style .= "        max-width: calc((var(--{$this->table_id}-cell_width) * {$this->max_columns}) + {$this->max_columns}px + 17px);";
+            $style .= "max-width: calc((var(--{$this->table_id}-cell_width) * {$this->max_columns}) + {$this->max_columns}px + 17px);";
         }
         return $style;
     }
