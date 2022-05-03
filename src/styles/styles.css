@@ -1,0 +1,46 @@
+:root {}
+
+.sprss_table_wrapper {
+    width: max-content;
+    border: 2px solid green
+}
+
+.sprss_canvas {
+    height: max-content;
+    border: 2px solid blue;
+    position: fixed;
+}
+
+.sprss_std_spreadsheet {
+    border-collapse: collapse;
+    border: 1px solid #c0c0c0;
+    background: #fff;
+}
+
+.sprss_std_row {}
+
+.sprss_std_cell {
+    border: 1px solid #cdcdcd;
+    font-family: monospace;
+    font-size: 1.5em;
+    /* min-width: 80px; */
+    padding: 0 6px;
+    overflow-x: hidden;
+    /* white-space: nowrap; */
+    /* width: 1000px; */
+}
+
+.sprss_std_cell:disabled {
+    background: #fff;
+    opacity: 1;
+}
+
+.sprss_cell_selected {
+    outline: 2px solid #196ddb;
+}
+
+.sprss_selection_tool {
+    background: #0e65eb;
+    opacity: 0.1;
+    outline: 1px solid #196ddb;
+}
