@@ -29,8 +29,9 @@ class Spreadsheet extends Engine {
     public function start_spreadsheet(): void {
         echo "<style>{$this->css->spreadsheet_styles()}</style>";
         echo "<div class='sprss_table_wrapper'>";
-        // echo "<canvas class='sprss_canvas' id='{$this->table_id}__canvas'></canvas>";
+        echo "<div class='sprss_selection_tool' = id='{$this->table_id}__selector'></div>";
         echo "<table
+            id='{$this->table_id}__canvas'
             class='sprss_std_spreadsheet'
             cellspacing='0'
             cellpadding='0'

@@ -47,7 +47,7 @@
 }
 
 .sprss_selection_tool {
-    background: #0e65eb;
-    opacity: 0.1;
-    outline: 1px solid #196ddb;
+    background: #0e67eb18;
+    position: absolute;
+    z-index: 2;
 }

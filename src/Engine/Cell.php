@@ -33,14 +33,15 @@ class Cell {
         int $width = 180,
     ): void {
         $params = [
-            'class'      => "sprss_std_cell",
-            'id'         => "{$this->table_id}__r{$row}c{$col}",
-            'name'       => "{$this->table_id}__spreadsheet_cell",
-            'data-row'   => $row,
-            'data-col'   => $col,
-            'data-width' => $width + 12 + 1,
-            'style'      => "width:{$width}px",
-            'height'     => 30,
+            'class'       => "sprss_std_cell",
+            'id'          => "{$this->table_id}__r{$row}c{$col}",
+            'name'        => "{$this->table_id}__spreadsheet_cell",
+            'data-row'    => $row,
+            'data-col'    => $col,
+            'data-width'  => $width + 12 + 1,
+            'data-height' => 30,
+            'style'       => "width:{$width}px",
+            'height'      => 30,
         ];
 
         echo "<td";
